@@ -9,16 +9,24 @@ const PortalState = (props: PortalStateProps): JSX.Element => {
 	const initialState: PortalInitialState = {
 		id: 'portal',
 		portal: false,
+		modal: '',
+		form: false,
 	};
 
 	const [state, dispatch] = useReducer<
 		Reducer<PortalInitialState, PortalAction>
 	>(PortalReducer, initialState);
 
-	const togglePortal = () => {
+	const togglePortal = (modal: string, form: boolean) => {
+		const data = {
+			portal: state.portal,
+			modal: modal,
+			form: form,
+		};
+
 		dispatch({
 			type: 'TOGGLE_PORTAL',
-			payload: !state.portal,
+			payload: data,
 		});
 	};
 
@@ -27,6 +35,8 @@ const PortalState = (props: PortalStateProps): JSX.Element => {
 			value={{
 				id: state.id!,
 				portal: state.portal,
+				modal: state.modal,
+				form: state.form,
 				togglePortal,
 			}}
 		>

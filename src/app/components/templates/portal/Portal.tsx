@@ -9,7 +9,10 @@ const Modal = (): JSX.Element => {
 
 	return (
 		<div id={id} className="portal">
-			<div className="portal__background" onClick={togglePortal}></div>
+			<div
+				className="portal__background"
+				onClick={() => togglePortal('', false)}
+			></div>
 			<ModalContainer />
 		</div>
 	);

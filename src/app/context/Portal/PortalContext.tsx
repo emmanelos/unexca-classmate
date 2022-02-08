@@ -3,7 +3,9 @@ import { createContext } from 'react';
 interface PortalInitialState {
 	id: string;
 	portal: boolean;
-	togglePortal: () => void;
+	modal: string;
+	form: boolean;
+	togglePortal: (modal: string, form: boolean) => void;
 }
 
 const PortalContext = createContext<PortalInitialState>(null!);

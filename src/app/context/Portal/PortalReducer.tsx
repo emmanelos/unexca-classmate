@@ -7,7 +7,9 @@ const PortalReducer = (state: PortalInitialState, action: PortalAction) => {
 	switch (type) {
 		case TOGGLE_PORTAL:
 			return {
-				portal: payload,
+				portal: !payload.portal,
+				modal: payload.modal,
+				form: payload.form,
 			};
 
 		default:
