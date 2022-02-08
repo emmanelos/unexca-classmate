@@ -1,0 +1,32 @@
+@use '../../../../styles/settings/variables';
+@use '../../../../styles/tools/mixins';
+
+.footer {
+	display: flex;
+	height: clamp(3.0625rem, 10.53vh, 3.0625rem);
+	align-items: center;
+	justify-content: center;
+	padding: 0 6%;
+	background-color: variables.$darker-color;
+	color: variables.$lighter-color;
+	font-size: clamp(0.5rem, 0.5682rem + 2.9091vw, 0.6rem);
+	text-align: center;
+
+	@include mixins.from(mm) {
+		font-size: clamp(0.6rem, 4.1083rem + 4.0712vw, 0.7rem);
+	}
+
+	@include mixins.from(t) {
+		font-size: clamp(0.9rem, 4.1083rem + 4.0712vw, 1rem);
+	}
+
+	@include mixins.from(ll) {
+		height: clamp(3.0625rem, 0.2054rem + 4.2857vw, 6.0625rem);
+		font-size: clamp(1rem, 0.75rem + 0.7813vw, 1.6rem);
+	}
+
+	&__link {
+		color: variables.$lighter-color;
+		text-decoration: underline;
+	}
+}
