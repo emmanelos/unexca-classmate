@@ -2,8 +2,10 @@ import { useContext } from 'react';
 import { Portal } from '../../../context/Portal/Portal';
 import PortalContext from '../../../context/Portal/PortalContext';
 
+import { Link } from 'react-router-dom';
+
 const Form = () => {
-	const { modal } = useContext<Portal>(PortalContext);
+	const { modal, togglePortal } = useContext<Portal>(PortalContext);
 
 	let action;
 
@@ -55,7 +57,10 @@ const Form = () => {
 	if (modal === 'login') {
 		action = (
 			<form>
-				<p>login</p>
+				<Link to="/login" onClick={() => togglePortal('', false)}>
+					Login
+				</Link>
+				<p> login</p>
 				<label htmlFor="text">Text</label>
 				<input type="text" name="text" title="text" placeholder="text" />
 
