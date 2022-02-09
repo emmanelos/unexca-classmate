@@ -1,6 +1,5 @@
 import './Header.scss';
 import encabezado from '../../../../assets/images/encabezado.png';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
 	return (
