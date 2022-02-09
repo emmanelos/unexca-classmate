@@ -12,6 +12,14 @@
 		font-size: clamp(1rem, 4.1083rem + 4.0712vw, 1.5rem);
 	}
 
+	@include mixins.from(t) {
+		font-size: clamp(1.5rem, 4.1083rem + 4.0712vw, 1.55rem);
+	}
+
+	@include mixins.from(ll) {
+		font-size: clamp(1.55rem, 0.75rem + 0.7813vw, 1.8rem);
+	}
+
 	&__about {
 		display: flex;
 		flex-direction: column;
@@ -22,7 +30,7 @@
 
 	&__logo {
 		display: flex;
-		width: 5em;
+		width: 4em;
 		align-items: center;
 		justify-content: center;
 		border: 0.4em solid #002d6c;
@@ -32,7 +40,7 @@
 
 	&__classmate {
 		color: #002d6c;
-		font-size: 2.2em;
+		font-size: 1.8em;
 	}
 
 	&__title {
@@ -52,6 +60,11 @@
 		align-items: center;
 		justify-content: center;
 		gap: 1em;
+
+		@include mixins.from(t) {
+			flex-direction: row;
+			font-size: clamp(1.5rem, 4.1083rem + 4.0712vw, 1.7rem);
+		}
 	}
 
 	&__button {
@@ -59,6 +72,12 @@
 		padding: 0.5em 0.7em;
 		border: none;
 		border-radius: 0.5em;
+		cursor: pointer;
+		font-size: 0.8em;
+
+		@include mixins.from(t) {
+			width: 35%;
+		}
 	}
 
 	&__register {

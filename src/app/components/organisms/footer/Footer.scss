@@ -28,5 +28,9 @@
 	&__link {
 		color: #b1b6b6;
 		text-decoration: underline;
+
+		&:hover {
+			color: #ffffff;
+		}
 	}
 }
