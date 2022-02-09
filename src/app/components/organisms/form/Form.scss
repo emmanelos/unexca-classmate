@@ -6,6 +6,7 @@
 	flex-direction: column;
 	padding: 1.5em 2em;
 	gap: 1em;
+	overflow-y: auto;
 
 	@include mixins.from(mm) {
 		font-size: clamp(1rem, 4.1083rem + 4.0712vw, 1.5rem);
