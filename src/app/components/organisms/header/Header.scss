@@ -3,24 +3,41 @@
 
 .header {
 	display: flex;
-	height: clamp(4.0625rem, 10.53vh, 5.0625rem);
+	width: min(100%, 48rem);
+	height: auto;
+	flex-direction: column;
 	align-items: center;
-	padding: 0 1em;
-	box-shadow: 2px 0 2px 1px rgb(0 0 0 / 20%);
-	font-size: clamp(1.1rem, 0.5682rem + 2.9091vw, 1.25rem);
-	gap: 1em;
+	justify-content: center;
+	margin: 0 auto;
+	gap: 0.5em;
 
-	@include mixins.from(mm) {
-		font-size: clamp(1.25rem, 4.1083rem + 4.0712vw, 1.4rem);
+	&__unexca {
+		width: 100%;
 	}
 
-	@include mixins.from(t) {
-		font-size: clamp(1.4rem, 4.1083rem + 4.0712vw, 1.55rem);
-	}
+	&__bottom {
+		display: flex;
+		width: 100%;
+		height: clamp(4.0625rem, 10.53vh, 5.0625rem);
+		align-items: center;
+		padding: 0 1em;
+		border-top: 0.01em solid rgb(0 0 0 / 20%);
+		border-bottom: 0.01em solid rgb(0 0 0 / 20%);
+		font-size: clamp(1.1rem, 0.5682rem + 2.9091vw, 1.25rem);
+		gap: 1em;
 
-	@include mixins.from(ll) {
-		height: clamp(5.0625rem, 0.2054rem + 4.2857vw, 7.0625rem);
-		font-size: clamp(1.55rem, 0.75rem + 0.7813vw, 1.7rem);
+		@include mixins.from(mm) {
+			font-size: clamp(1.25rem, 4.1083rem + 4.0712vw, 1.4rem);
+		}
+
+		@include mixins.from(t) {
+			font-size: clamp(1.4rem, 4.1083rem + 4.0712vw, 1.55rem);
+		}
+
+		@include mixins.from(ll) {
+			height: clamp(5.0625rem, 0.2054rem + 4.2857vw, 7.0625rem);
+			font-size: clamp(1.55rem, 0.75rem + 0.7813vw, 1.7rem);
+		}
 	}
 
 	&__menu {
@@ -30,6 +47,7 @@
 		height: 1em;
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
 	}
 
 	&__hamburger {
@@ -58,7 +76,17 @@
 	}
 
 	&__title {
-		font-size: 1.4em;
+		cursor: pointer;
+		font-size: 1.2em;
 		font-weight: normal;
+	}
+
+	&__classmate {
+		display: inline-block;
+		color: #1a306f;
+
+		&::first-letter {
+			font-weight: bold;
+		}
 	}
 }

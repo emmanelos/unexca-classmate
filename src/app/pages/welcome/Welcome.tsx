@@ -7,7 +7,7 @@ const Welcome = () => {
 	const { portal, togglePortal } = useContext<Portal>(PortalContext);
 
 	return (
-		<section className="content login">
+		<section className="content welcome">
 			<button onClick={() => togglePortal('register', true)}>Registrarse</button>
 			<button onClick={() => togglePortal('login', true)}>Iniciar sesión</button>
 			welcome

@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Portal } from '../../context/Portal/Portal';
 import PortalContext from '../../context/Portal/PortalContext';
 import PortalContainer from '../../components/templates/portal/PortalContainer';
+import './Home.scss';
 
 const Home = () => {
 	const { portal, togglePortal } = useContext<Portal>(PortalContext);
