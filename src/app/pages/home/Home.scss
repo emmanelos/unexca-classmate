@@ -1,3 +1,74 @@
+@use '../../../styles/tools/mixins';
+
 .home {
-	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+	gap: 0.8em;
+
+	@include mixins.from(mm) {
+		font-size: clamp(1rem, 4.1083rem + 4.0712vw, 1.5rem);
+	}
+
+	&__about {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.8em;
+	}
+
+	&__logo {
+		display: flex;
+		width: 5em;
+		align-items: center;
+		justify-content: center;
+		border: 0.4em solid #002d6c;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+	}
+
+	&__classmate {
+		color: #002d6c;
+		font-size: 2.2em;
+	}
+
+	&__title {
+		font-size: 1.15em;
+		text-align: center;
+	}
+
+	&__description {
+		font-size: 0.85em;
+		text-align: center;
+	}
+
+	&__buttons {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1em;
+	}
+
+	&__button {
+		width: 80%;
+		padding: 0.5em 0.7em;
+		border: none;
+		border-radius: 0.5em;
+	}
+
+	&__register {
+		background-color: #007bff;
+		color: #ffffff;
+	}
+
+	&__login {
+		border: 0.01em solid #007bff;
+		background-color: #ffffff;
+		color: #007bff;
+	}
 }

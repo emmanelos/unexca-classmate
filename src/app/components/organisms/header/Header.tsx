@@ -3,7 +3,7 @@ import encabezado from '../../../../assets/images/encabezado.png';
 
 const Header = () => {
 	return (
-		<header className="header">
+		<header className="header container">
 			<img className="header__unexca" src={encabezado} alt="" />
 			<div className="header__bottom">
 				<div className="header__menu">

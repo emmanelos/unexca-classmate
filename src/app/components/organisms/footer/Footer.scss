@@ -3,7 +3,7 @@
 
 .footer {
 	display: flex;
-	height: clamp(3.0625rem, 10.53vh, 3.0625rem);
+	height: clamp(3.0625rem, 10.53vh, 4.0625rem);
 	align-items: center;
 	justify-content: center;
 	padding: 0 6%;
@@ -13,7 +13,7 @@
 	text-align: center;
 
 	@include mixins.from(mm) {
-		font-size: clamp(0.6rem, 4.1083rem + 4.0712vw, 0.7rem);
+		font-size: clamp(0.6rem, 4.1083rem + 4.0712vw, 0.85rem);
 	}
 
 	@include mixins.from(t) {
@@ -21,7 +21,7 @@
 	}
 
 	@include mixins.from(ll) {
-		height: clamp(3.0625rem, 0.2054rem + 4.2857vw, 6.0625rem);
+		height: clamp(4.0625rem, 0.2054rem + 4.2857vw, 6.0625rem);
 		font-size: clamp(1rem, 0.75rem + 0.7813vw, 1.6rem);
 	}
 
