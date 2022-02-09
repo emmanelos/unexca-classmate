@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Portal } from '../../../context/Portal/Portal';
 import PortalContext from '../../../context/Portal/PortalContext';
+import './Form.scss';
 
 import { Link } from 'react-router-dom';
 
@@ -11,88 +12,123 @@ const Form = () => {
 
 	if (modal === 'register') {
 		action = (
-			<form>
-				<p>Register</p>
-				<label htmlFor="text">Text</label>
-				<input type="text" name="text" title="text" placeholder="text" />
+			<form className="form">
+				<div className="form__control">
+					<label className="form__label" htmlFor="name">
+						Nombre
+					</label>
+					<input className="form__input-text" type="text" name="name" title="name" />
+				</div>
 
-				<label htmlFor="email">Email</label>
-				<input
-					type="email"
-					name="email"
-					title="email"
-					placeholder="email"
-					id="register-email"
-				/>
+				<div className="form__control">
+					<label className="form__label" htmlFor="lastname">
+						Apellido
+					</label>
+					<input
+						className="form__input-text"
+						type="text"
+						name="lastname"
+						title="lastname"
+					/>
+				</div>
 
-				<label htmlFor="password">Password</label>
-				<input
-					type="password"
-					name="password"
-					title="password"
-					placeholder="password"
-					id="register-password"
-				/>
+				<div className="form__control">
+					<label className="form__label" htmlFor="email">
+						Email
+					</label>
+					<input
+						className="form__input-text"
+						type="email"
+						name="email"
+						title="email"
+						placeholder="email"
+						id="register-email"
+					/>
+				</div>
 
-				<select name="select" title="select" id="register-select">
-					<option selected disabled hidden value="">
-						Select
-					</option>
-					<option value="option">Option</option>
-				</select>
+				<div className="form__control">
+					<label className="form__label" htmlFor="permissions">
+						Permisos
+					</label>
+					<select name="permissions" title="select" id="permissions">
+						<option selected disabled hidden value="">
+							Selecciona
+						</option>
+						<option value="DOCENTE">Docente</option>
+						<option value="ESTUDIANTE">Estudiante</option>
+					</select>
+				</div>
 
-				<label htmlFor="checkbox">Checkbox</label>
-				<input
-					type="checkbox"
-					name="checkbox"
-					title="checkbox"
-					id="register-checkbox"
-				/>
+				<div className="form__control">
+					<label className="form__label" htmlFor="password">
+						Password
+					</label>
+					<input
+						className="form__input-text"
+						type="password"
+						name="password"
+						title="password"
+						placeholder="password"
+						id="register-password"
+					/>
+				</div>
 
-				<button type="submit">Submit</button>
+				<div className="form__control">
+					<label className="form__label" htmlFor="confirm-password">
+						Confirmar contraseña
+					</label>
+					<input
+						className="form__input-text"
+						type="confirm-password"
+						name="confirm-password"
+						title="confirm-password"
+						id="confirm-password"
+					/>
+				</div>
+
+				<button className="form__button" type="submit">
+					Registrarse
+				</button>
 			</form>
 		);
 	}
 
 	if (modal === 'login') {
 		action = (
-			<form>
-				<Link to="/login" onClick={() => togglePortal('', false)}>
-					Login
-				</Link>
-				<p> login</p>
-				<label htmlFor="text">Text</label>
-				<input type="text" name="text" title="text" placeholder="text" />
+			<form className="form">
+				<div className="form__control">
+					<label className="form__label" htmlFor="email">
+						Email
+					</label>
+					<input
+						className="form__input-text"
+						type="email"
+						name="email"
+						title="email"
+						placeholder="email"
+						id="email"
+					/>
+				</div>
 
-				<label htmlFor="email">Email</label>
-				<input
-					type="email"
-					name="email"
-					title="email"
-					placeholder="email"
-					id="email"
-				/>
+				<div className="form__control">
+					<label className="form__label" htmlFor="password">
+						Password
+					</label>
+					<input
+						className="form__input-text"
+						type="password"
+						name="password"
+						title="password"
+						placeholder="password"
+						id="password"
+					/>
+				</div>
 
-				<label htmlFor="password">Password</label>
-				<input
-					type="password"
-					name="password"
-					title="password"
-					placeholder="password"
-					id="password"
-				/>
-
-				<select name="select" title="select" id="select">
-					<option selected disabled hidden value="">
-						Select
-					</option>
-					<option value="option">Option</option>
-				</select>
-
-				<label htmlFor="checkbox">Checkbox</label>
-				<input type="checkbox" name="checkbox" title="checkbox" id="checkbox" />
-
-				<button type="submit">Submit</button>
+				<button className="form__button">
+					<Link to="/welcome" onClick={() => togglePortal('', false)}>
+						Iniciar sesión
+					</Link>
+				</button>
 			</form>
 		);
 	}

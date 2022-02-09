@@ -8,7 +8,7 @@ const Pages = () => {
 		<LayoutContainer>
 			<Routes>
 				<Route path="/" element={<HomeContainer />} />
-				<Route path="/login" element={<WelcomeContainer />} />
+				<Route path="/welcome" element={<WelcomeContainer />} />
 			</Routes>
 		</LayoutContainer>
 	);

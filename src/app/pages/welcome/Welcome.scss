@@ -1,0 +1,114 @@
+.welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5em;
+	background-color: rgb(128 128 128 / 8%);
+
+	&__comentarios {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: 0.8em;
+	}
+
+	&__comentario {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1em;
+		gap: 0.5em;
+	}
+
+	&__comentario-container {
+		display: flex;
+		flex-direction: column;
+		padding: 1em;
+		border: 0.01em solid #007bff;
+		background-color: #007bff1e;
+		border-radius: 0.8em;
+		gap: 0.8em;
+	}
+
+	&__autor {
+		font-weight: bold;
+	}
+
+	&__fecha {
+		font-size: 0.7em;
+		text-decoration: underline;
+	}
+
+	&__cuerpo {
+		padding: 0 1em;
+	}
+
+	&__respuestas {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+
+	&__respuesta {
+		display: flex;
+		width: 90%;
+		flex-direction: column;
+		padding: 1em;
+		border: 0.01em solid grey;
+		border-radius: 0.8em;
+		gap: 0.25em;
+	}
+
+	&__autor-respuesta {
+		font-weight: bold;
+	}
+
+	&__fecha-respuesta {
+		padding-bottom: 0.5em;
+		font-size: 0.7em;
+		text-decoration: underline;
+	}
+
+	&__cuerpo-respuesta {
+		padding: 0 1em;
+	}
+
+	&__input-comentar {
+		width: 100%;
+		padding: 0.5em 1em;
+		border: 0.1em solid gray;
+		border-radius: 1em;
+	}
+
+	&__mi-mensaje {
+		display: flex;
+		padding-top: 0.5em;
+		margin-left: auto;
+		color: grey;
+		font-size: 0.8em;
+		gap: 1em;
+	}
+
+	&__editar,
+	&__eliminar {
+		cursor: pointer;
+	}
+
+	&__menu {
+		display: flex;
+		margin-left: auto;
+		gap: 0.5em;
+
+		&-item {
+			color: #007bff;
+			cursor: pointer;
+			text-decoration: underline;
+
+			> * {
+				color: #007bff;
+				text-decoration: underline;
+			}
+		}
+	}
+}

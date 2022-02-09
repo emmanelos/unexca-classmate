@@ -1,0 +1,53 @@
+@use '../../../../styles/tools/mixins';
+
+.form {
+	display: flex;
+	max-width: 80vw;
+	flex-direction: column;
+	padding: 1.5em 2em;
+	gap: 1em;
+
+	@include mixins.from(mm) {
+		font-size: clamp(1rem, 4.1083rem + 4.0712vw, 1.5rem);
+	}
+
+	@include mixins.from(t) {
+		font-size: clamp(1.5rem, 4.1083rem + 4.0712vw, 1.55rem);
+	}
+
+	@include mixins.from(ll) {
+		font-size: clamp(1.55rem, 0.75rem + 0.7813vw, 1.8rem);
+	}
+
+	&__control {
+		display: flex;
+		flex-direction: column;
+		font-size: 1em;
+		gap: 0.1em;
+	}
+
+	&__label {
+		font-size: 0.8em;
+		font-weight: bold;
+	}
+
+	&__input-text {
+		height: 1.5em;
+		font-size: 0.8em;
+	}
+
+	&__button {
+		width: 100%;
+		padding: 0.5em 0.7em;
+		border: none;
+		background-color: #007bff;
+		border-radius: 0.5em;
+		color: #ffffff;
+		cursor: pointer;
+		font-size: 0.8em;
+
+		> * {
+			color: #ffffff;
+		}
+	}
+}
