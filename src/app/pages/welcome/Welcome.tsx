@@ -5,7 +5,6 @@ const Welcome = () => {
 	return (
 		<section className="content welcome container">
 			<p className="welcome__menu">
-				<span className="welcome__menu-item">Mi perfil</span>
 				<span className="welcome__menu-item">
 					<Link to="/">Salir</Link>
 				</span>
